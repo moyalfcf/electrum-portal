@@ -1,0 +1,36 @@
+  .dockLeft{
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 1px;
+  }
+  
+  .ribbon{
+    background-color: rgb(160, 216, 240);  
+  }
+
+  .ribbonpage{
+    padding: 1px;
+    margin: 1px;
+  }
+
+  .ribbongroup{ 
+    text-align: center;
+    height: 80px;  
+    padding: 0px;
+    margin: -5px;
+    font-size:x-small;
+    background-color: rgb(186, 223, 239); 
+  }
+
+  .ribbonbutton {     
+    display:grid;
+    text-align: center;
+    padding: 1px;
+    margin: -5px;
+    font-size:x-small;
+  }
+
+  .ZeroPadding{
+    height: 2px;
+    padding: 0px 0px 0px 0px;
+  }

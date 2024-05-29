@@ -1,38 +1,48 @@
-.App {
+.App1 {
+  background-color:rgb(152, 244, 244);
+}
+
+.document {
+  max-width: fit-content;
+  margin: 10px;
+  padding: 12px 20px;
+  background-color:rgb(152, 244, 244);
+}
+
+.dx-sortable-dragging .dx-tab {
+  box-sizing: border-box;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dx-theme-generic .dx-tabs-wrapper .dx-item.dx-tab {
+  max-width: fit-content;
+  padding-left: 14px;
+  padding-right: 9px;
+  line-height: 1.618;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dx-tabpanel .dx-tab .dx-icon.dx-icon-close {
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 7px;
+  opacity: 0.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.toolbox {
+  border-top: 1px solid #ddd;
+  background-color:rgb(247, 240, 240);
+  margin: 0 0px 0px 0px;
+  padding: 12px 20px;
+  position: relative;
+  color: #777;
 }
 
-.App-link {
-  color: #61dafb;
+.tools {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tools li {
+  display: inline-block;
 }
