@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'devextreme-react/Button';
+import RibbonItemInfo from './RibbonItemInfo';
 
-const RibbonButtonItem = ({ id, text, image, onButtonItemClick }) => (
-    <div className='ribbonbutton'>
-        <Button  
-            icon={image} 
-            stylingMode="text"
-            onClick = {onButtonItemClick}
-        /> 
-        <div>{text}</div>
+class RibbonButtonItem extends Component<RibbonItemInfo> {
+
+    constructor(props: RibbonItemInfo){
+      super(props);
+      this._itemInfo = props;
+    }
+  
+    private _itemInfo: RibbonItemInfo;
+  
+    render(){
+      return (
+        <div className='ribbonbutton'>
+            <Button  
+                icon={this._itemInfo.Image} 
+                stylingMode="text"
+                onClick = {() => this._itemInfo.RibbonItemClickHanlder(this._itemInfo)}
+            /> 
+        <div>{this._itemInfo.Title}</div>
     </div>
-);
-
-RibbonButtonItem.propTypes = {
-  text: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
-  //onButtonItemClick: PropTypes.func.isRequired,
-};
-
-export default RibbonButtonItem;
+      );
+    }
+    
+  }
+  export default RibbonButtonItem;

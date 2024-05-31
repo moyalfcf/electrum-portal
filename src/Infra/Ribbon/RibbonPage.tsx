@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import RibbonGroup from './RibbonGroup.tsx';
+import RibbonPageInfo from './RibbonPageInfo.tsx';
 
-const RibbonPage = ({ data }) => {
-  //const title = data.Title;
-  const groups = data.Groups;
-  return (
-    <div className="ribbonpage"> 
-      {groups.map((group, index) => (
-        <div className="dockLeft">
-          <RibbonGroup
-              key={index}
-              id={group.ID}
-              text={group.Title}
-              items={(group.Items)}
-          />
-        </div>
-      ))}
-    </div>
-  );
+
+class RibbonPage extends Component {
+
+  constructor(props){
+    super(props);
+    this._pageInfo = props.data;
+  }
+
+  private _pageInfo: RibbonPageInfo;
+
+  render(){
+    return (
+      <div className="ribbonpage"> 
+        {this._pageInfo.Groups.map((group, index) => (
+          <div className="dockLeft">
+            <RibbonGroup
+                key={index}
+                ID={group.ID}
+                Title={group.Title}
+                Items={(group.Items)}
+                RibbonItemClickHanlder={this._pageInfo.RibbonItemClickHanlder}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
+  
 }
 export default RibbonPage;

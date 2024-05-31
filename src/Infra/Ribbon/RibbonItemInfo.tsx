@@ -3,7 +3,7 @@ interface RibbonItemInfo{
     ID: number;
     Title: string; 
     Image: string; 
-    ComponentName: string;
     Tag: object | null;
+    RibbonItemClickHanlder: (param: RibbonItemInfo) => void;    
 }
 export default RibbonItemInfo;

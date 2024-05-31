@@ -21,24 +21,24 @@ class Register {
             Items: [
               {
                 ID: 1, 
-                Title: "Open", 
-                Image:"Images/Copy.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Title: "Margin Group", 
+                Image:"Images/Copy.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "MarginGroup", Title: "Margin Group"}
               },
               {
                 ID: 2, 
-                Title: "Close", 
+                Title: "Margin Group", 
                 Image:"Images/Edit.svg", 
-                ComponentName: "cmp name",
-                Tag: null
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "MarginGroup", Title: "Margin Group"}
               },
               {
                 ID: 3, 
-                Title: "New", 
-                Image:"Images/View.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Title: "Margin Group", 
+                Image:"Images/Link.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "MarginGroup", Title: "Margin Group"}
               }
             ]
           },
@@ -48,24 +48,24 @@ class Register {
             Items: [
               {
                 ID: 1, 
-                Title: "Open", 
-                Image:"Images/Copy.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Title: "Margin Group Run", 
+                Image:"Images/Copy.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "MarginGroupRun", Title: "Margin Group Run"}
               },
               {
                 ID: 2, 
-                Title: "Close", 
+                Title: "Margin Group Run", 
                 Image:"Images/Edit.svg", 
-                ComponentName: "cmp name",
-                Tag: null
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "MarginGroupRun", Title: "Margin Group Run"}
               },
               {
                 ID: 3, 
-                Title: "New", 
-                Image:"Images/View.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Title: "Margin Group Run", 
+                Image:"Images/Link.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "MarginGroupRun", Title: "Margin Group Run"}
               }
             ]
           },
@@ -82,23 +82,23 @@ class Register {
               {
                 ID: 1, 
                 Title: "Open", 
-                Image:"Images/Copy.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Image:"Images/Copy.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 2, 
                 Title: "Close", 
                 Image:"Images/Edit.svg", 
-                ComponentName: "cmp name",
-                Tag: null
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 3, 
                 Title: "New", 
-                Image:"Images/View.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Image:"Images/Link.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
               }
             ]
           },
@@ -109,23 +109,23 @@ class Register {
               {
                 ID: 1, 
                 Title: "Open", 
-                Image:"Images/Copy.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Image:"Images/Copy.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 2, 
                 Title: "Close", 
                 Image:"Images/Edit.svg", 
-                ComponentName: "cmp name",
-                Tag: null
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 3, 
                 Title: "New", 
-                Image:"Images/View.png", 
-                ComponentName: "cmp name",
-                Tag: null
+                Image:"Images/Link.svg", 
+                RibbonItemClickHanlder: null,
+                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
               }
             ]
           },

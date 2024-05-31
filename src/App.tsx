@@ -8,6 +8,7 @@ import DocumentInfo from './Infra/DocumentManager/DocumentInfo.tsx';
 import Ribbon from './Infra/Ribbon/Ribbon.tsx';
 import RibbonPageInfo from './Infra/Ribbon/RibbonPageInfo.tsx';
 import Register from './Infra/Register.tsx';
+import RibbonItemInfo from './Infra/Ribbon/RibbonItemInfo.tsx';
 
 class App extends Component{
 
@@ -20,10 +21,9 @@ class App extends Component{
     this.initialRibbons = Register.RibbonPages;
   };
 
-  OpenComponent = () => {
+  OpenComponent = (param: RibbonItemInfo) => {
     if (this.documentManagerRef.current) {
-      const tempCmp : DocumentInfo = { ID: 1, Name: "mgrun", Title: "Margin Group Run"};
-      this.documentManagerRef.current.OpenDocument(tempCmp);
+      this.documentManagerRef.current.openDocument(param.Tag as DocumentInfo);
     }
   };
 
@@ -31,7 +31,7 @@ class App extends Component{
     return (
       <React.Fragment>
         <div className="App">
-          <Ribbon RibbonHeight={135} RibbonPages={this.initialRibbons} />
+          <Ribbon RibbonHeight={135} RibbonPages={this.initialRibbons} RibbonItemClickHanlder={this.OpenComponent} />
           <DocumentManager ref={this.documentManagerRef} />
         </div>
       </React.Fragment>    

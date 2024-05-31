@@ -13,10 +13,6 @@ class DocumentManager extends Component{
     documents: Array<DocumentInfo>;
     selectedItem : DocumentInfo;
 
-    OpenDocument: (doc : DocumentInfo) => {
-      Alert(doc);
-    };
-
     RenderTitle = (data) => (
       <React.Fragment>
         <div>
@@ -34,6 +30,13 @@ class DocumentManager extends Component{
         </div>
       </React.Fragment>
     )
+
+    
+    public openDocument(param: DocumentInfo) {
+      alert(param.Title);
+    };
+
+
     closeButtonHandler = (data) => {
 
     };
