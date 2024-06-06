@@ -51,21 +51,21 @@ class Register {
                 Title: "Margin Group Run", 
                 Image:"Images/Copy.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "MarginGroupRun", Title: "Margin Group Run"}
+                Tag: { ID: 2, Name: "MarginGroupRun", Title: "Margin Group Run"}
               },
               {
                 ID: 2, 
                 Title: "Margin Group Run", 
                 Image:"Images/Edit.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "MarginGroupRun", Title: "Margin Group Run"}
+                Tag: { ID: 2, Name: "MarginGroupRun", Title: "Margin Group Run"}
               },
               {
                 ID: 3, 
                 Title: "Margin Group Run", 
                 Image:"Images/Link.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "MarginGroupRun", Title: "Margin Group Run"}
+                Tag: { ID: 2, Name: "MarginGroupRun", Title: "Margin Group Run"}
               }
             ]
           },
@@ -84,21 +84,21 @@ class Register {
                 Title: "Open", 
                 Image:"Images/Copy.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
+                Tag: { ID: 3, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 2, 
                 Title: "Close", 
                 Image:"Images/Edit.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
+                Tag: { ID: 3, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 3, 
                 Title: "New", 
                 Image:"Images/Link.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
+                Tag: { ID: 3, Name: "ClientProfile", Title: "Client Profile"}
               }
             ]
           },
@@ -111,21 +111,21 @@ class Register {
                 Title: "Open", 
                 Image:"Images/Copy.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
+                Tag: { ID: 3, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 2, 
                 Title: "Close", 
                 Image:"Images/Edit.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
+                Tag: { ID: 3, Name: "ClientProfile", Title: "Client Profile"}
               },
               {
                 ID: 3, 
                 Title: "New", 
                 Image:"Images/Link.svg", 
                 RibbonItemClickHanlder: null,
-                Tag: { ID: 1, Name: "ClientProfile", Title: "Client Profile"}
+                Tag: { ID: 3, Name: "ClientProfile", Title: "Client Profile"}
               }
             ]
           },

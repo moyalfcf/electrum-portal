@@ -4,22 +4,29 @@ import DocumentTemplate from "./DocumentTemplate.tsx";
 import DocumentInfo from "./DocumentInfo.tsx";
 import Sortable, { SortableTypes } from 'devextreme-react/sortable';
 
-class DocumentManager extends Component{
+interface DocumentManagerState{
+  Documents: DocumentInfo[];
+  SelectedDocument: DocumentInfo | undefined;
+}
+
+class DocumentManager extends Component<{}, DocumentManagerState>{
     constructor(props){
         super(props);
-        this.documents = [{ ID: 1, Name: "MarginGroup", Title: "Margin Group"}, { ID: 2, Name: "MarginRun", Title: "Margin Run"}, { ID: 2, Name: "ClientProfile", Title: "Client Profile"}];
+        //this.documents = 
+
+        this.state = {
+          SelectedDocument: undefined, // { ID: 1, Name: "MarginGroup", Title: "Margin Group", Params: null},
+          Documents: [] //[{ ID: 1, Name: "MarginGroup", Title: "Margin Group", Params: null},             { ID: 2, Name: "MarginRun", Title: "Margin Run", Params: null},             { ID: 3, Name: "ClientProfile", Title: "Client Profile", Params: null}]          
+        };
     }
 
-    documents: Array<DocumentInfo>;
-    selectedItem : DocumentInfo;
-
-    RenderTitle = (data) => (
+    RenderTitle = (data: DocumentInfo) => (
       <React.Fragment>
         <div>
           <span>
             {data.Title}
           </span>
-          {this.documents.length >= 2 && (
+          {this.state.Documents.length >= 1 && (
             <i
               className="dx-icon dx-icon-close"
               onClick={() => {
@@ -33,15 +40,54 @@ class DocumentManager extends Component{
 
     
     public openDocument(param: DocumentInfo) {
-      alert(param.Title);
+      if(this.state.Documents.length == 0)
+        this.addDocument(param);
+      else {
+        const doc = this.state.Documents.find(x => x.ID === param.ID);
+        if(doc){              
+          this.setState((prevState) => ({
+            SelectedDocument: doc
+          }));
+        }
+        else{
+          //alert("not found!");
+          this.addDocument(param);
+        }          
+      }  
     };
 
+    addDocument = (newDocument: DocumentInfo) => {
+      this.setState((prevState) => ({
+          Documents: [...prevState.Documents, newDocument],
+          SelectedDocument: newDocument
+      }));
+  };
 
-    closeButtonHandler = (data) => {
 
+    closeButtonHandler = (doc: DocumentInfo) => {
+      
+      const index = this.state.Documents.indexOf(doc);
+      
+      this.setState((prevState) => ({
+        Documents: prevState.Documents.filter(x => x.ID !== doc.ID)
+      }));
+
+      if(index<this.state.Documents.length){
+        this.setState((prevState) => ({
+          SelectedDocument: this.state.Documents[index]
+        }));
+      }
+      else{
+        this.setState((prevState) => ({
+          SelectedDocument: undefined
+        }));
+      }
+             
     };
-    onSelectionChanged = () => {
-
+    onSelectionChanged = (args: TabPanelTypes.SelectionChangedEvent) => {
+      this.setState((prevState) => ({
+        SelectedDocument: args.addedItems[0]
+      }));
     };
 
     onTabDragStart = (e: SortableTypes.DragStartEvent) => {
@@ -49,12 +95,14 @@ class DocumentManager extends Component{
     };
   
     onTabDrop = (e: SortableTypes.ReorderEvent) => {
-      const newEmployees = [...this.documents];
+      const newDocuments = [...this.state.Documents];
   
-      newEmployees.splice(e.fromIndex, 1);
-      newEmployees.splice(e.toIndex, 0, e.itemData);
+      newDocuments.splice(e.fromIndex, 1);
+      newDocuments.splice(e.toIndex, 0, e.itemData);
   
-      this.documents = newEmployees;
+      this.setState((prevState) => ({
+        Documents: newDocuments,
+    }));
     };
 
     render(){
@@ -62,19 +110,19 @@ class DocumentManager extends Component{
           <React.Fragment>          
             <Sortable
               filter=".dx-tab"
-              data={this.documents}
+              data={this.state.Documents}
               itemOrientation="horizontal"
               dragDirection="horizontal"
               onDragStart={this.onTabDragStart}
               onReorder={this.onTabDrop}
             >
               <TabPanel
-                dataSource={this.documents}
+                dataSource={this.state.Documents}
                 height={410}
                 itemTitleRender={this.RenderTitle}
                 deferRendering={false}
                 showNavButtons={true}
-                selectedItem={this.selectedItem}
+                selectedItem={this.state.SelectedDocument}
                 repaintChangesOnly={true}
                 onSelectionChanged={this.onSelectionChanged}
                 itemComponent={DocumentTemplate}

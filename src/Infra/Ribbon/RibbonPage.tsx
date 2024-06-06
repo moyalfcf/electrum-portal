@@ -19,9 +19,7 @@ class RibbonPage extends Component {
           <div className="dockLeft">
             <RibbonGroup
                 key={index}
-                ID={group.ID}
-                Title={group.Title}
-                Items={(group.Items)}
+                Group={group}
                 RibbonItemClickHanlder={this._pageInfo.RibbonItemClickHanlder}
             />
           </div>

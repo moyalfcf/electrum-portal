@@ -4,6 +4,6 @@ interface RibbonItemInfo{
     Title: string; 
     Image: string; 
     Tag: object | null;
-    RibbonItemClickHanlder: (param: RibbonItemInfo) => void;    
+    RibbonItemClickHanlder: (param: RibbonItemInfo) => void; 
 }
 export default RibbonItemInfo;

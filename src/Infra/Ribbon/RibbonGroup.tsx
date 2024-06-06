@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
 import RibbonButtonItem from './RibbonButtonItem.tsx';
 import RibbonGroupInfo from './RibbonGroupInfo.tsx';
+import RibbonItemInfo from './RibbonItemInfo';
+import Button from 'devextreme-react/cjs/button';
 
+interface RibbonGroupProps{
+  Group: RibbonGroupInfo;
+  RibbonItemClickHanlder: (param: RibbonItemInfo) => void;
+}
 
-class RibbonGroup extends Component<RibbonGroupInfo> {
+class RibbonGroup extends Component<RibbonGroupProps> {
 
-  constructor(props: RibbonGroupInfo){
+  constructor(props: RibbonGroupProps){
     super(props);
-    this._groupInfo = props;
+    this._groupInfo = props.Group;
+
+    this.RibbonItemClickHanlder=props.RibbonItemClickHanlder;
   }
 
   private _groupInfo: RibbonGroupInfo;
+  RibbonItemClickHanlder: (param: RibbonItemInfo) => void;
+
+  OnButtonClick = (param: RibbonItemInfo) => {
+    this.RibbonItemClickHanlder(param);
+  }
 
   render(){
     return (
@@ -19,11 +32,8 @@ class RibbonGroup extends Component<RibbonGroupInfo> {
           <div className="dockLeft">
               <RibbonButtonItem
                   key={index}
-                  ID={item.ID}
-                  Title={item.Title}
-                  Image={item.Image}
-                  Tag={item.Tag}
-                  RibbonItemClickHanlder={this._groupInfo.RibbonItemClickHanlder}
+                  Item={item}                  
+                  RibbonItemClickHanlder={this.OnButtonClick}
               />
           </div>        
         ))}      
