@@ -1,6 +1,7 @@
 import React, { Component, useCallback } from "react";
 import TabPanel, { TabPanelTypes } from 'devextreme-react/tab-panel';
 import DocumentTemplate from "./DocumentTemplate.tsx";
+import DocumentWrapper from "./DocumentWrapper.tsx";
 import DocumentInfo from "./DocumentInfo.tsx";
 import Sortable, { SortableTypes } from 'devextreme-react/sortable';
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DocumentInfo from './DocumentInfo';
+import DocumentWrapper from './DocumentWrapper.tsx'
 
 
 class DocumentTemplate extends Component {
@@ -15,7 +16,7 @@ class DocumentTemplate extends Component {
     return (
       <React.Fragment>
         <div className="document">
-          Hello Document: {this._documentInfo.Name}!
+          <DocumentWrapper ID={this._documentInfo.ID} Title={this._documentInfo.Title} Name={this._documentInfo.Name}  />
         </div>
       </React.Fragment>
     );

@@ -5,7 +5,7 @@ interface RibbonPageInfo{
     ID : number;
     Title: string;
     Groups: Array<RibbonGroupInfo>;
-    RibbonItemClickHanlder: (param: RibbonItemInfo) => void;
+    RibbonItemClickHanlder: ((param: RibbonItemInfo) => void) | null;
 }
 export default RibbonPageInfo;
 

@@ -2,6 +2,6 @@ interface DocumentInfo{
     ID : number;
     Title: string;
     Name: string;
-    Params: [] | null;
+    Params?: [] | null;
 }
 export default DocumentInfo;
