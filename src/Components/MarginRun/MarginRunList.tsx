@@ -56,4 +56,4 @@ class MarginRunList extends Component{
     }
 }
 
-export default MarginGroupList;
+export default MarginRunList;

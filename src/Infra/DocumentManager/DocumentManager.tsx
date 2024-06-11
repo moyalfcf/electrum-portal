@@ -116,7 +116,8 @@ class DocumentManager extends Component<{}, DocumentManagerState>{
               onDragStart={this.onTabDragStart}
               onReorder={this.onTabDrop}
             >
-              <TabPanel
+              <TabPanel              
+                noDataText=""
                 dataSource={this.state.Documents}
                 height={410}
                 itemTitleRender={this.RenderTitle}

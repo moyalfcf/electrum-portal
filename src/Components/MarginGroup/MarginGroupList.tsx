@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Button from 'devextreme-react/button';
 import DataGrid from 'devextreme-react/data-grid'
 
-//import IconAdd from '../../Assets/Images/Add.svg'
-//import IconEdit from '../../Assets/Images/Edit.svg'
-//import IconRetire from '../../Assets/Images/Retire.svg'
+import IconAdd from '../../Assets/Images/Add.svg'
+import IconEdit from '../../Assets/Images/Edit.svg'
+import IconRetire from '../../Assets/Images/Retire.svg'
 
 import {sample, columns, key} from '../../Assets/Data/data.js'
 
@@ -24,19 +24,19 @@ class MarginGroupList extends Component{
                     <ul className="tools list-unstyled">
                         <li>
                             <Button
-                                icon={"../../Assets/Images/Add.svg"} 
+                                icon={IconAdd} 
                                 stylingMode="text"
                                 onClick = {this.onButtonItemClick}/>
                         </li>
                         <li>
                             <Button
-                                icon={'../../Assets/Images/Edit.svg'} 
+                                icon={IconEdit} 
                                 stylingMode="text"
                                 onClick = {this.onButtonItemClick}/>
                         </li>
                         <li>
                             <Button
-                                icon={'../../Assets/Images/Retire.svg'} 
+                                icon={IconRetire} 
                                 stylingMode="text"
                                 onClick = {this.onButtonItemClick}/>
                         </li>
