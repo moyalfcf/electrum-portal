@@ -44,6 +44,7 @@ class MarginRunList extends Component{
                 </div>
                 <DataGrid
                     dataSource={sample}
+                    height='63vh'
                     defaultColumns={columns}
                     keyExpr={key}
                     showBorders={true}

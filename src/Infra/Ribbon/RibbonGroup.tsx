@@ -37,7 +37,7 @@ class RibbonGroup extends Component<RibbonGroupProps> {
               />
           </div>        
         ))}      
-        <div>{this._groupInfo.Title}</div>
+        <div className='ribbongrouptitle'>{this._groupInfo.Title}</div>
     </div>
     );
   }

@@ -2,11 +2,10 @@
   background-color:rgb(152, 244, 244);
 }
 
-.document {
-  max-width: fit-content;
-  margin: 10px;
-  padding: 12px 20px;
-  background-color:rgb(152, 244, 244);
+.document {  
+  margin: 0px;
+  padding: 2px;
+  background-color:rgb(244, 228, 195);
 }
 
 .dx-sortable-dragging .dx-tab {

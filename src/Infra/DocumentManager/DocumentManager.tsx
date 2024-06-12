@@ -120,7 +120,7 @@ class DocumentManager extends Component<{}, DocumentManagerState>{
               <TabPanel              
                 noDataText=""
                 dataSource={this.state.Documents}
-                height={410}
+                height="80vh"
                 itemTitleRender={this.RenderTitle}
                 deferRendering={false}
                 showNavButtons={true}
